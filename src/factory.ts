@@ -9,6 +9,6 @@ export const createRandomPerson = (): Person => {
     firstName,
     lastName,
     email: faker.internet.email({ firstName, lastName }),
-    phoneMobile: `4${faker.string.numeric({ length: 9 })}`,
+    phoneMobile: `4${faker.string.numeric({ length: 8 })}`,
   };
 };
