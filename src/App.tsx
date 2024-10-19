@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { fakerEN_AU as faker } from "@faker-js/faker";
 import { Person } from "./types";
 import { createRandomPerson } from "./factory";
 
