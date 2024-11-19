@@ -18,16 +18,16 @@ function App() {
           <tr>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>Mobile (Au)</th>
             <th>Email</th>
+            <th>Mobile (Au)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>{person.firstName}</td>
             <td>{person.lastName}</td>
-            <td>{person.phoneMobile}</td>
             <td>{person.email}</td>
+            <td>{person.phoneMobile}</td>
           </tr>
         </tbody>
       </table>
