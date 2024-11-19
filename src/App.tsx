@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { Person } from "./types";
-import { createRandomPerson } from "./factory";
+import { createRandomPersons } from "./factory";
 
 function App() {
-  const [person, setPerson] = useState<Person | null>(null);
+  const [persons, setPersons] = useState<Person[] | null>(null);
   useEffect(() => {
-    setPerson(createRandomPerson());
+    setPersons(createRandomPersons(2));
   }, []);
-  if (!person) return null;
+  if (!persons) return null;
 
   return (
     <>
@@ -23,12 +23,14 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>{person.firstName}</td>
-            <td>{person.lastName}</td>
-            <td>{person.email}</td>
-            <td>{person.phoneMobile}</td>
-          </tr>
+          {persons.map((person) => (
+            <tr>
+              <td>{person.firstName}</td>
+              <td>{person.lastName}</td>
+              <td>{person.email}</td>
+              <td>{person.phoneMobile}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </>
